@@ -1,0 +1,27 @@
+.modalquote {
+    position: fixed;
+    padding:2rem 7rem;
+    border-top: .5rem solid $primary-color;
+    left: 0;
+    right: 0;
+    bottom: -500%;
+    background: #fff;
+    z-index: 999;
+    transition: .5s;
+    &.active {
+        bottom: 0;
+    }
+
+    .grid_2 {
+        gap: 3rem;
+    }
+    a.close {
+        position: relative;
+        top: -1rem;
+        margin: 0 auto;
+        font-size: 4rem;
+        display: block;
+        text-align: right;
+        color: $primary-color;
+    }
+}

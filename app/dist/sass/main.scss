@@ -1,0 +1,335 @@
+@import "./reset";
+@import "./variable";
+@import "./function";
+@import "./mixin";
+@import "./typography";
+@import "./layout";
+@import "./list";
+@import "./btn";
+@import "./banner";
+@import "./media";
+@import "./input";
+@import "./search";
+@import "./animation";
+@import "./modal";
+@import "./tab";
+@import "./header";
+@import "./footer";
+
+.section1 {
+  left: 8rem;
+
+  &__box {
+    position: relative;
+    width: 100%;
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+
+    &:nth-child(2) {
+      background: $primary-color;
+    }
+
+    &:nth-child(3) {
+      // background: #ef4305;
+    }
+
+    &::before {
+      // content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../webImages/section1.png);
+      background-size: cover;
+      opacity: 0.0677777;
+    }
+
+    &--main {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding: 25% 0px;
+      height: 100vh;
+
+      &- {
+        margin: 7rem 0;
+        position: absolute;
+        height: 85vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        clip: rect(auto, auto, auto, auto);
+
+        &1 {
+          position: fixed;
+          width: 100%;
+          top: 50%;
+          // left: 8rem;
+          max-width: calc(100%);
+          transform: translateY(-40%);
+
+          .grid {
+            gap: 4rem;
+            align-items: center;
+            color: #fff;
+
+            .left {
+              position: relative;
+              overflow: hidden;
+
+              &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(211, 219, 229, 0.65);
+                transition: .5s;
+              }
+
+              img {
+                width: 100%;
+              }
+
+              &:hover::before {
+                width: 0;
+              }
+
+            }
+
+            p {
+              font-size: 2rem;
+              font-size: 500;
+              line-height: 1.5;
+            }
+
+            .right {
+              .btn {
+                border: .1rem solid #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section2 {
+  overflow: hidden;
+  padding: 6rem 0;
+
+  .block__inner {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      -webkit-transform: skew(0deg, 10deg);
+      transform: skew(0deg, 10deg);
+      z-index: -1;
+      background: $primary-color;
+      background-attachment: fixed;
+      background-image: url("../webImages/section2background.svg");
+    }
+  }
+
+  &__heading {
+    align-items: flex-start;
+    padding-bottom: 5rem;
+
+    .left {
+      width: 40%;
+      color: #fff;
+
+      h2 {
+        font-size: 7rem;
+      }
+
+      p {
+        font-size: 2rem;
+        line-height: 1.5;
+        text-align: justify;
+      }
+    }
+
+    .right {
+      width: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .servicesm {
+
+    //   padding-top: 20rem;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      background: #fff6eb;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: skew(0deg, 10deg);
+      transform: skew(0deg, 10deg);
+      background-image: url("../webImages/section2background.svg");
+    }
+  }
+
+  .services {
+    gap: 4rem;
+    margin-bottom: 5rem;
+
+    &__item {
+      position: relative;
+      background: #fff;
+      padding: 3rem 2rem;
+      border-radius: 2.5rem;
+      box-shadow: 0 0.7rem 2rem #641c0222;
+      transition: all 300ms ease;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -0.1rem;
+        right: -0.1rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem 0;
+        background-color: $primary-color;
+        background-size: 2rem 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../webImages/servicesicon.svg");
+      }
+
+      h3 {
+        color: $primary-color;
+      }
+
+      p {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: $primary-color;
+        opacity: 0.8;
+        line-height: 1.4;
+      }
+
+      &:hover {
+        transform: translateY(-1rem);
+        background: $primary-color;
+
+        &::after {
+          background-color: #fff;
+          background-size: 2rem 2rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../webImages/servicesicon2.svg");
+        }
+
+        h3,
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.section3 {
+  img {
+    width: 100%;
+  }
+}
+
+.section4 {
+  .block__inner {
+    gap: 4rem;
+  }
+
+  &box {
+    width: 40%;
+    box-shadow: 0 0.8rem 2.8rem #00000030;
+    background: #fff;
+    padding: 3rem 2rem;
+  }
+
+  h4 {
+    text-align: center;
+    color: $primary-color;
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  &__right {
+    align-self: stretch;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.logo__Slider {
+  &--img {
+    a {
+      position: relative;
+      display: block;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 95%;
+        height: 95%;
+        top: 50%;
+        left: 50%;
+        background: rgba(0, 0, 0, .5);
+        transform: translate(-50%, -50%) scale(0);
+        transition: all .4s;
+      }
+
+      &::after {
+        content: '+';
+        position: absolute;
+        font-size: 70px;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all .4s;
+      }
+
+      &:hover::after,
+      &:hover:before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      img {
+        width: 100%;
+        max-height: 200px;
+        height: 200px;
+        // background-color: #000;
+        object-fit: cover;
+
+      }
+    }
+  }
+}
+
+@import "./innerPage";
+@import "./responsive";
