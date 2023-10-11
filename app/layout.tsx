@@ -22,7 +22,7 @@ export default function RootLayout({
       <header className="header grid grid--col80">
         <div className="block__inner flex_ flex_space">
             <div className="header__logo">
-               <Link href="index.html">
+               <Link href="/">
                     <Image src={require('./dist/webImages/logo.png')} alt="" />
                 </Link>
             </div>
@@ -36,13 +36,13 @@ export default function RootLayout({
                     <ul className="header__right--menu-m list list-inline">
                         <li className="list__item">
                             <div className="sideMenuinner flex_ flex_space">
-                                <Link href="index.html" className="active">Home</Link>
+                                <Link href="/" className="active">Home</Link>
                                 <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
                             </div>
                         </li>
                         <li className="list__item">
                             <div className="sideMenuinner flex_ flex_space">
-                                <Link href="about.html">About</Link>
+                                <Link href="/about">About</Link>
                                 <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
                             </div>
                         </li>
@@ -95,7 +95,7 @@ export default function RootLayout({
         </div>
         <div className="header__side flex_ align_center flex_center">
             <div className="flex_ align_center flex_center">
-                <Link href="index.html" className="company__name">
+                <Link href="/" className="company__name">
                     Fast Buddys
                 </Link>
                 <Link href="" className="company__scroll flex_ align_center flex_center">

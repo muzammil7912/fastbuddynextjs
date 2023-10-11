@@ -324,8 +324,6 @@
     height: 16rem;
     -webkit-animation: animation1 2.2s infinite ease-in-out;
     animation: animation1 2.2s infinite ease-in-out;
-    -ms-animation: animation1 2.2s ease-out;
-    -ms-animation-iteration-count: infinite;
 }
 
 .cb-button .cbb-circle-fill {
@@ -340,8 +338,6 @@
     height: 10rem;
     -webkit-animation: animation2 1.7s infinite ease-in-out;
     animation: animation2 1.7s infinite ease-in-out;
-    -ms-animation: animation2 1.7s ease-out;
-    -ms-animation-iteration-count: infinite;
 }
 
 @keyframes animation1 {
@@ -459,9 +455,6 @@
 .faa-ring.animated-hover:hover {
     -webkit-animation: ring 2s ease infinite;
     animation: ring 2s ease infinite;
-    transform-origin-x: 50%;
-    transform-origin-y: 0;
-    transform-origin-z: initial
 }
 
 .faa-parent.animated-hover:hover>.faa-ring.faa-fast,

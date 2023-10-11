@@ -30,12 +30,8 @@
       background: $primary-color;
     }
 
-    &:nth-child(3) {
-      // background: #ef4305;
-    }
 
     &::before {
-      // content: "";
       position: absolute;
       left: 0;
       top: 0;
