@@ -1,6 +1,11 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
 import React from 'react'
 
+export const metadata: Metadata = {
+    title: 'About Fast Buddys - Our News',
+    description: 'We create customized communications packages tailored to meet the specific needs of your project. Our team of skilled and experienced professionals ensures that our recommendations are strategically sound.',
+}
 const page = () => {
   return (
     <main className="main relative">

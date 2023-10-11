@@ -195,3 +195,14 @@ img {
   }
 
 }
+
+img {
+  width: auto;
+}
+.loaderr {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #2d2d2d;
+  z-index: 9;
+}
