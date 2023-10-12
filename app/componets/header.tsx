@@ -50,21 +50,26 @@ const Header = () => {
                 <ul className="header__right--menu-m list list-inline">
                 <Suspense fallback={<p>...loading</p>}>
                 {data &&
-          data.header.map((item) => {
-            return (
-                <li className="list__item" key={item.label}>
-                <div className="sideMenuinner flex_ flex_space">
-                  <Link href={item.link} className={pathname === item.link ? 'active' : ''} >{item.label}
+    data.header.map(item => (
+      <li className="list__item" key={item.label}>
+        <div className="sideMenuinner flex_ flex_space">
+          <Link href={item.link} className={pathname === item.link ? 'active' : ''}>
+            {item.label}
+          </Link>
+          {item.childrens && (
+            <ul>
+              {item.childrens.map(childItem => (
+                <li key={childItem.label}>
+                  <Link href={childItem.link} >
+                    {childItem.label}
                   </Link>
-                  {item.childrens && (
-                    <Link href={item.link} className="dropdown">
-                      <i className="fa-solid fa-chevron-down"></i>
-                    </Link>
-                  )}
-                </div>
-              </li>
-            )
-          })}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </li>
+    ))}
     </Suspense>
               
                 </ul>

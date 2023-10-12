@@ -50,6 +50,19 @@ const Navber = [
             },
         ]
     },
+    {
+        label:"Contact Us",
+        link:"/contact"
+    },
+    {
+        label:"Portfolio",
+        link:"/portfolio"
+    },
+    {
+        label:"RATING & REVIEWS",
+        link:"/rating-and-reviews"
+    },
+
 ]
 export function GET(request: NextRequest) {
     return NextResponse.json({
