@@ -1,11 +1,37 @@
 'use client'
-import React from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
+import axios from 'axios';
+interface HeaderProps {
+    pathname: string;
+  }
+  
+  interface MenuItem {
+    label: string;
+    link: string;
+    childrens?: MenuItem[];
+  }
+  
+  interface ApiResponse {
+    header: MenuItem[];
+  }
 const Header = () => {
-    const router = useRouter()
-    console.log(router)
+   const  pathname = usePathname()
+   const [data, setData] = useState<ApiResponse | null>(null);
+
+   useEffect(() => {
+     axios
+       .get<ApiResponse>('http://localhost:3000/api/main')
+       .then(response => {
+         setData(response.data);
+       })
+       .catch(error => {
+         console.error('Error fetching data:', error);
+       });
+   }, []);
+ 
   return (
     <header className="header grid grid--col80">
     <div className="block__inner flex_ flex_space">
@@ -22,56 +48,25 @@ const Header = () => {
             <nav className="header__right--menu">
                 <a className="closeNav"> <i className="fa-solid fa-xmark"></i></a>
                 <ul className="header__right--menu-m list list-inline">
-                    <li className="list__item">
-                        <div className="sideMenuinner flex_ flex_space">
-                            <Link  href="/"  className={router.pathname == "/" ? "active" : ""}>Home</Link>
-                            <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
-                        </div>
-                    </li>
-                    <li className="list__item">
-                        <div className="sideMenuinner flex_ flex_space">
-                            <Link href="/about"  className={router.pathname == "/about" ? "active" : ""}>About</Link>
-                            <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
-                        </div>
-                    </li>
-                    <li className="list__item">
-
-                        <div className="sideMenuinner flex_ flex_space">
-                            <Link href="">Services</Link>
-                            <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
-                        </div>
-                        <ul>
-                            <li> <Link href="webDesigning.html">Web Designing</Link> </li>
-                            <li> <Link href="WebDevelopment.html">Web Development</Link> </li>
-                            <li> <Link href="WebHosting.html">Web Hosting</Link> </li>
-                            <li> <Link href="LogoDesigning.html">Logo Designing</Link> </li>
-                            <li> <Link href="GraphicDesigning.html">Graphic Designing</Link> </li>
-                            <li> <Link href="SecuritySystem.html">Security System</Link> </li>
-                            <li> <Link href="DomainRegistration.html">Domain Registration</Link> </li>
-                            <li> <Link href="Marketing360.html">Marketing 360</Link> </li>
-                            <li> <Link href="videoanimation.html">Video Animation</Link> </li>
-                        </ul>
-                    </li>
-                    <li className="list__item">
-
-                        <div className="sideMenuinner flex_ flex_space">
-                            <Link href="contact.html"  className={router.pathname == "/contact" ? "active" : ""}>Contact Us</Link>
-                            <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
-                        </div>
-                    </li>
-                    <li className="list__item">
-                        <div className="sideMenuinner flex_ flex_space">
-                            <Link href="" className={router.pathname == "/portfolio" ? "active" : ""}>Portfolio</Link>
-                            <Link  href=""  className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
-                        </div>
-                    </li>
-                    <li className="list__item">
-
-                        <div className="sideMenuinner flex_ flex_space">
-                            <Link href="" className={router.pathname == "/rating" ? "active" : ""}>RATING & REVIEWS</Link>
-                            <Link href="" className="dropdown"><i className="fa-solid fa-chevron-down"></i></Link>
-                        </div>
-                    </li>
+                <Suspense fallback={<p>...loading</p>}>
+                {data &&
+          data.header.map((item) => {
+            return (
+                <li className="list__item" key={item.label}>
+                <div className="sideMenuinner flex_ flex_space">
+                  <Link href={item.link} className={pathname === item.link ? 'active' : ''} >{item.label}
+                  </Link>
+                  {item.childrens && (
+                    <Link href={item.link} className="dropdown">
+                      <i className="fa-solid fa-chevron-down"></i>
+                    </Link>
+                  )}
+                </div>
+              </li>
+            )
+          })}
+    </Suspense>
+              
                 </ul>
             </nav>
             <Link href="packages.html"  className="btn btn-secondary"><b>Packages</b>
