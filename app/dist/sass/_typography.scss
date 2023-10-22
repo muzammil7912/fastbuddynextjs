@@ -33,6 +33,7 @@ h6 {
   font-family: 'Poppins', sans-serif;
   line-height: 1.2;
   margin: 1rem 0;
+  font-weight: 700;
 }
 
 h1 {
@@ -206,4 +207,10 @@ img {
   height: 100vh;
   background: #2d2d2d;
   z-index: 9;
+}
+.thumbCarousel {
+  display: none;
+}
+.swiper-wrapper {
+  min-width: 0;
 }

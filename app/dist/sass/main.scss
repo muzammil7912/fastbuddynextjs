@@ -284,7 +284,10 @@
 
 .logo__Slider {
   &--img {
-    a {
+    img {
+      width: 100%;
+    }
+    div {
       position: relative;
       display: block;
 

@@ -2,11 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
-
 const Footer = () => {
   return (
     <footer>
-        <div className="footer">
+       <div className="footer">
             <div className="footer_box_main grid grid--col80">
                 <div className="block__inner grid footer_m">
                     <div className="footer_box" style={{display: "inline-block"}}>
