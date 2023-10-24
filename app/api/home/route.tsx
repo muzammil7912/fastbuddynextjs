@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export function GET(request: NextRequest) {
     return NextResponse.json({
         EmbroideryPunching: {
-            "EmbroideryPunching1":[
+            "item1":[
                 {
                     image:"https://fastbuddys.com/webImages/Embroidery/1.jpeg"
                 },
@@ -23,7 +23,7 @@ export function GET(request: NextRequest) {
                     image:"https://fastbuddys.com/webImages/Embroidery/6.jpeg"
                 },
             ],
-            "EmbroideryPunching2":[
+            "item2":[
                 {
                     image:"https://fastbuddys.com/webImages/Embroidery/7.jpeg"
                 },
@@ -41,6 +41,48 @@ export function GET(request: NextRequest) {
                 },
                 {
                     image:"https://fastbuddys.com/webImages/Embroidery/8.jpeg"
+                },
+            ],
+        },
+        VectorArt: {
+            "item1":[
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/1.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/2.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/3.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/4.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/5.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/6.jpeg"
+                },
+            ],
+            "item2":[
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/7.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/8.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/9.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/5.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/7.jpeg"
+                },
+                {
+                    image:"https://fastbuddys.com/webImages/Vector/8.jpeg"
                 },
             ],
         }

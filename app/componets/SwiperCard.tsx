@@ -7,9 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Link from "next/link";
 
-const SwiperCard = ({ data }: any) => {
+const SwiperCard = ({ data,title,gallery }: any) => {
   useEffect(() => {
-    Fancybox.bind('[data-fancybox="gallery"]', {
+    Fancybox.bind(`[data-fancybox="${gallery}"]`, {
       //
     });
   }, []);
@@ -20,7 +20,7 @@ const SwiperCard = ({ data }: any) => {
         <div className="grid grid--col80">
           <div className="block__inner">
             <div className="innerMainHeading">
-              <h3 className="">Embroidery Punching</h3>
+              <h3 className="">{title}</h3>
             </div>
           </div>
         </div>
@@ -36,13 +36,13 @@ const SwiperCard = ({ data }: any) => {
               className="mySwiper logo__Slider"
             >
               {data &&
-                data.EmbroideryPunching1.map((item: any) => {
+                data.item1.map((item: any) => {
                   return (
                       <SwiperSlide key={item.image}>
                         <Link
                           className="logo__Slider--img"
                           href={item.image}
-                          data-fancybox="gallery"
+                          data-fancybox={`${gallery}`}
                         >
                           <Image
                             src={item.image}
@@ -68,13 +68,13 @@ const SwiperCard = ({ data }: any) => {
               className="mySwiper logo__Slider"
             >
               {data &&
-                data.EmbroideryPunching2.map((item: any) => {
+                data.item2.map((item: any) => {
                   return (
                       <SwiperSlide key={item.image}>
                         <Link
                           className="logo__Slider--img"
                           href={item.image}
-                          data-fancybox="gallery"
+                          data-fancybox={`${gallery}`}
                         >
                           <Image
                             src={item.image}

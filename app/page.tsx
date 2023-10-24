@@ -3,23 +3,26 @@ import { useEffect, useState } from "react";
 import HomeBanner from "./componets/banner";
 import axios from "axios";
 import SwiperCard from "./componets/SwiperCard";
-interface EmbroideryItem {
+interface ItemSwiper {
   image: string;
 }
-
-interface EmbroideryCategory {
+interface AllData {
   EmbroideryPunching: {
-    EmbroideryPunching1: EmbroideryItem[]
-    EmbroideryPunching2: EmbroideryItem[]
+    item1: ItemSwiper[]
+    item2: ItemSwiper[]
+  },
+  VectorArt: {
+    item1: ItemSwiper[]
+    item2: ItemSwiper[]
   },
 }
 export default function Home() {
-  const [embroideryCategory, setEmbroideryCategory] = useState<EmbroideryCategory | null>(null);
+  const [data, setData] = useState<AllData | null>(null);
   useEffect(() => {
     axios
-      .get<EmbroideryCategory>('http://localhost:3000/api/home')
+      .get<AllData>('http://localhost:3000/api/home')
       .then(response => {
-        setEmbroideryCategory(response.data);
+        setData(response.data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -29,7 +32,8 @@ export default function Home() {
     <>
     <HomeBanner />
     <main className="">
-      <SwiperCard data={embroideryCategory?.EmbroideryPunching} />
+      <SwiperCard data={data?.EmbroideryPunching} gallery={"Embroidery"} title={"Embroidery Punching"} />
+      <SwiperCard data={data?.VectorArt} gallery={"Vector"} title={"Vector Art"} />
 
     </main>
     </>

@@ -4,9 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import axios from 'axios';
-interface HeaderProps {
-    pathname: string;
-  }
+
   
   interface MenuItem {
     label: string;
