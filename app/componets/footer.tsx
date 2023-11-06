@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaChevronRight, FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer>
@@ -35,20 +35,20 @@ const Footer = () => {
                     <div className="footer_box">
                         <h2>Company</h2>
                         <ul className="foterm">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="packages.html">Packages</a></li>
-                            <li><a href="#">RATING & REVIEWS</a></li>
+                            <li><a href="about.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>About</span></a></li>
+                            <li><a href="packages.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>Packages </span></a></li>
+                            <li><a href="#" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>RATING & REVIEWS </span></a></li>
                         </ul>
 
                     </div>
                     <div className="footer_box">
                         <h2>Services</h2>
                         <ul className="foterm">
-                            <li> <Link href="webDesigning.html">Web Designing</Link> </li>
-                            <li> <Link href="WebDevelopment.html">Web Development</Link> </li>
-                            <li> <Link href="WebHosting.html">Web Hosting</Link> </li>
-                            <li> <Link href="LogoDesigning.html">Logo Designing</Link> </li>
-                            <li> <Link href="GraphicDesigning.html">Graphic Designing</Link> </li>
+                            <li> <Link href="webDesigning.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>Web Designing</span></Link> </li>
+                            <li> <Link href="WebDevelopment.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>Web Development</span></Link> </li>
+                            <li> <Link href="WebHosting.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>Web Hosting</span></Link> </li>
+                            <li> <Link href="LogoDesigning.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>Logo Designing</span></Link> </li>
+                            <li> <Link href="GraphicDesigning.html" className='flex items-center  gap-1'><FaChevronRight /> <span className='relative pt-2'>Graphic Designing</span></Link> </li>
                         </ul>
 
                     </div>

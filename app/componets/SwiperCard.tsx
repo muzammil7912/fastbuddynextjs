@@ -70,7 +70,7 @@ const SwiperCard = ({ data,title,gallery }: any) => {
               {data &&
                 data.item2.map((item: any) => {
                   return (
-                      <SwiperSlide key={item.image}>
+                      <SwiperSlide key={item.key}>
                         <Link
                           className="logo__Slider--img"
                           href={item.image}

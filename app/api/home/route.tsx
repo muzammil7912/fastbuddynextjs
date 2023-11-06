@@ -5,41 +5,53 @@ export function GET(request: NextRequest) {
         EmbroideryPunching: {
             "item1":[
                 {
+                   key:"1",
                     image:"https://fastbuddys.com/webImages/Embroidery/1.jpeg"
                 },
                 {
+                   key:"2",
                     image:"https://fastbuddys.com/webImages/Embroidery/2.jpeg"
                 },
                 {
+                   key:"3",
                     image:"https://fastbuddys.com/webImages/Embroidery/3.jpeg"
                 },
                 {
+                   key:"4",
                     image:"https://fastbuddys.com/webImages/Embroidery/4.jpeg"
                 },
                 {
+                   key:"5",
                     image:"https://fastbuddys.com/webImages/Embroidery/5.jpeg"
                 },
                 {
+                   key:"6",
                     image:"https://fastbuddys.com/webImages/Embroidery/6.jpeg"
                 },
             ],
             "item2":[
                 {
+                   key:"7",
                     image:"https://fastbuddys.com/webImages/Embroidery/7.jpeg"
                 },
                 {
+                   key:"8",
                     image:"https://fastbuddys.com/webImages/Embroidery/8.jpeg"
                 },
                 {
+                   key:"9",
                     image:"https://fastbuddys.com/webImages/Embroidery/9.jpeg"
                 },
                 {
+                   key:"10",
                     image:"https://fastbuddys.com/webImages/Embroidery/10.jpeg"
                 },
                 {
+                   key:"11",
                     image:"https://fastbuddys.com/webImages/Embroidery/7.jpeg"
                 },
                 {
+                   key:"12",
                     image:"https://fastbuddys.com/webImages/Embroidery/8.jpeg"
                 },
             ],
@@ -47,41 +59,53 @@ export function GET(request: NextRequest) {
         VectorArt: {
             "item1":[
                 {
+                   key:"1",
                     image:"https://fastbuddys.com/webImages/Vector/1.jpeg"
                 },
                 {
+                   key:"2",
                     image:"https://fastbuddys.com/webImages/Vector/2.jpeg"
                 },
                 {
+                   key:"3",
                     image:"https://fastbuddys.com/webImages/Vector/3.jpeg"
                 },
                 {
+                   key:"4",
                     image:"https://fastbuddys.com/webImages/Vector/4.jpeg"
                 },
                 {
+                   key:"5",
                     image:"https://fastbuddys.com/webImages/Vector/5.jpeg"
                 },
                 {
+                   key:"6",
                     image:"https://fastbuddys.com/webImages/Vector/6.jpeg"
                 },
             ],
             "item2":[
                 {
+                   key:"7",
                     image:"https://fastbuddys.com/webImages/Vector/7.jpeg"
                 },
                 {
+                   key:"8",
                     image:"https://fastbuddys.com/webImages/Vector/8.jpeg"
                 },
                 {
+                   key:"9",
                     image:"https://fastbuddys.com/webImages/Vector/9.jpeg"
                 },
                 {
+                   key:"10",
                     image:"https://fastbuddys.com/webImages/Vector/5.jpeg"
                 },
                 {
+                   key:"11",
                     image:"https://fastbuddys.com/webImages/Vector/7.jpeg"
                 },
                 {
+                   key:"12",
                     image:"https://fastbuddys.com/webImages/Vector/8.jpeg"
                 },
             ],

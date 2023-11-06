@@ -6,15 +6,13 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-
-    &::before{
+    &::before {
         content: '';
         position: absolute;
         inset: 0;
         background: #000000d6;
     }
 }
-
 
 .footer_menu {
     position: relative;
@@ -29,7 +27,6 @@
     list-style: none;
     padding: 0px;
     margin: 0;
-   
 }
 
 .footer_menu ul li {
@@ -46,7 +43,6 @@
     margin-right: 33px;
     padding: 10px 0px;
     text-transform: uppercase;
-
 }
 
 .footer_menu ul li:last-child a {
@@ -64,39 +60,37 @@
     bottom: 0px;
 }
 
-
-
 .footer_menu ul li a:hover:after {
     width: 100%;
 }
+
 .footer_menus {
     margin: 5rem 0 2rem;
     gap: 4rem;
-    li{
+    li {
         position: relative;
-        & + li::before{
-            
-    content: '';
-    position: absolute;
-    left: -2.3rem;
-    top: 0;
-    width: 0.2rem;
-    height: 100%;
-    background: #fff;
-
+        &+li::before {
+            content: '';
+            position: absolute;
+            left: -2.3rem;
+            top: 0;
+            width: 0.2rem;
+            height: 100%;
+            background: #fff;
         }
-    a {
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: #fff;
-        text-transform: uppercase;
-        @include ease-in();
-        &:hover {
-            color: $secondary-color;
+        a {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            @include ease-in();
+            &:hover {
+                color: $secondary-color;
+            }
         }
     }
 }
-}
+
 .footer_m {
     grid-template-columns: 1.1fr 0.6fr 0.8fr 1fr;
     gap: 3rem;
@@ -106,23 +100,12 @@
     position: relative;
     width: 100%;
     margin: 2rem auto;
-  &:nth-child(1) ul li {
-      user-select: text
-  }
-
+    &:nth-child(1) ul li {
+        user-select: text
+    }
     .foterm {
         li {
             @include ease-in();
-            &::before {
-                content: '';
-            font-family: "Font Awesome 6 Free";
-            content: "\f105";
-            display: inline-block;
-            margin-right: 1rem;
-            vertical-align: middle;
-            font-weight: 900;
-            
-            }
         }
     }
 }
@@ -146,15 +129,11 @@
     }
 }
 
-
-
 .footer_box h2 {
     color: #ffffff;
     font-size: 2rem;
     text-transform: uppercase;
 }
-
-
 
 .footer_box ul li {
     position: relative;
@@ -175,9 +154,6 @@
     color: $secondary-color;
 }
 
-
-
-
 .footer_bottom {
     position: relative;
     width: 100%;
@@ -191,13 +167,13 @@
 }
 
 .footer_bottom_ {
-    *{
+    * {
         font-weight: 100;
         color: #fff;
     }
     h3 {
         margin: 0;
-        a{
+        a {
             font-weight: 600;
             @include ease-in();
             &:hover {
@@ -205,18 +181,16 @@
             }
         }
     }
-    
 }
 
-
 .footer_bottom_txt {
-    a,span {
+    a,
+    span {
         font-size: 1.4rem;
     }
     a {
         margin: 0 .7rem;
     }
-    
 }
 
 .footer_box {
@@ -243,8 +217,9 @@
         }
     }
 }
- // go to top  
- .top_side {
+
+// go to top  
+.top_side {
     position: fixed;
     bottom: 5rem;
     right: 2rem;
@@ -287,7 +262,8 @@
 
 #fc-phone .cbb-circle-img,
 #fc-ticket .cbb-circle-img {
-    font-family: "fontelloregular";;
+    font-family: "fontelloregular";
+    ;
     text-align: center;
     line-height: 6rem;
     font-size: 3.6rem;
@@ -346,13 +322,11 @@
         -webkit-transform: scale(0.4);
         transform: scale(0.4);
     }
-
     70% {
         opacity: .6;
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-
     100% {
         opacity: .3;
         -webkit-transform: scale(0.5);
@@ -366,18 +340,14 @@
         -webkit-transform: scale(0.6);
         transform: scale(0.6);
     }
-
     70% {
         opacity: .8;
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-
     100% {
         opacity: .1;
         -webkit-transform: scale(0.7);
         transform: scale(0.7);
     }
 }
-
-
