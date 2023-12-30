@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Fast Buddys - Digital Media On Demand Global',
   description: 'We offer a comprehensive range of services, including Graphic Design, Web Design, Social Media Marketing, and Print Design. Our dedicated team is always available to provide you with support and assistance.',
-}
+} 
 
 export default function RootLayout({children,}: {children: React.ReactNode}) {
 
