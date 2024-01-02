@@ -21,7 +21,7 @@ const HOmeMain = () => {
     const [data, setData] = useState<AllData | null>(null);
     useEffect(() => {
       axios
-        .get<AllData>('http://localhost:3000/api/home')
+        .get<AllData>('https://fastbuddynextjs.vercel.app/api/home')
         .then(response => {
           setData(response.data);
         })

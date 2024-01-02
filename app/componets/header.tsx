@@ -21,7 +21,7 @@ const Header = () => {
 
    useEffect(() => {
      axios
-       .get<ApiResponse>('http://localhost:3000/api/main')
+       .get<ApiResponse>('https://fastbuddynextjs.vercel.app/api/main')
        .then(response => {
          setData(response.data);
        })
